@@ -34,7 +34,7 @@ import android.os.UserHandle;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
-import org.lineageos.internal.util.FileUtils;
+import org.lineageos.settings.device.util.FileUtils;
 import org.lineageos.settings.device.utils.Constants;
 
 public class Startup extends BroadcastReceiver {
@@ -44,6 +44,7 @@ public class Startup extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         final String action = intent.getAction();
+        /*
         if (lineageos.content.Intent.ACTION_INITIALIZE_LINEAGE_HARDWARE.equals(action)) {
             // Disable button settings if needed
             if (!hasButtonProcs()) {
@@ -76,7 +77,7 @@ public class Startup extends BroadcastReceiver {
             } else {
                 updateOClickServiceState(context);
             }
-        } else if (intent.getAction().equals(BluetoothAdapter.ACTION_STATE_CHANGED)) {
+        } else */ if (intent.getAction().equals(BluetoothAdapter.ACTION_STATE_CHANGED)) {
             if (hasOClick()) {
                 updateOClickServiceState(context);
             }
